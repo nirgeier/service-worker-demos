@@ -24,7 +24,7 @@ To view this panel open the following url in chrome:
  > Load several images from the web and store them in cache. One of the images is not processed by the service worker
  and once we cant find the image in the cache we display a default image instead.
 
-- <a href="https://nirgeier.github.io/service-worker-demos/advanced-fetch/index.html" target="_blank">advanced-fetch</a>
+- advanced-fetch
 =======
 
  > Some more advanced fetch options like filtering responses based upon the URL or caching responses to different caches
