@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service worker Prefetch images</title>
+
+    <!-- Bootstrap -->
+    <link href="../utils/bootstrap.min.css" rel="stylesheet">
+    <link href="../utils/demos.css" rel="stylesheet">
+
+</head>
+<body>
+<div>
+    <div class="leftSide">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Progress status</h3>
+            </div>
+            <div class="panel-body">
+                <ul id="status"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="rightSide">
+        <img src="https://c2.staticflickr.com/2/1432/5104204268_44a6121f32_b.jpg" width="300px"><br/>
+        <img src="https://c2.staticflickr.com/6/5144/5616269560_17aff6f21f_z.jpg" width="300px"><br/>
+        <img src="https://c2.staticflickr.com/4/3946/18367790263_711864ef10_h.jpg" width="300px">
+    </div>
+</div>
+<script src="../utils/jquery.min.js"></script>
+<script src="../utils/bootstrap.min.js"></script>
+<script src="../utils/SWUtils.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

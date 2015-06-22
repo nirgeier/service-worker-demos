@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service worker life cycle</title>
+
+    <!-- Bootstrap -->
+    <link href="../utils/bootstrap.min.css" rel="stylesheet">
+    <link href="../utils/demos.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Progress status</h3>
+    </div>
+    <div class="panel-body">
+        <ul id="status"></ul>
+    </div>
+</div>
+
+<script src="../utils/jquery.min.js"></script>
+<script src="../utils/bootstrap.min.js"></script>
+<script src="../utils/SWUtils.js"></script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+
+        // The path which the service worker will be registered for
+        var scope = './';
+
+        //
+        // Register the service worker
+        //
+        // The register method returns promise
+        // After a successful registration the browser fires the install event
+        //
+        navigator.serviceWorker.register('./service-worker.js', {scope: scope})
+                .then(function(registration) {
+                    SWUtils.updateProgress('ServiceWorker registration successful with scope: <span class="scope">' + registration.scope + '</span>');
+
+                    // Check to see if this page is controlled
+                    // The page wil not be tracked on its first load and we must refresh it
+                    // so it will be tracked
+                    if (navigator.serviceWorker.controller) {
+                        SWUtils.updateProgress('Page is tracked...');
+                    } else {
+                        // If .controller isn't set, then prompt the user to reload the page so that the Service Worker can take control.
+                        SWUtils.updateError('Please reload this page to allow the service worker to take control.');
+                    }
+
+                    // We can grab some information from the registration as well.
+                    // We will see it in later demos
+                    console.dir(registration);
+
+                }).catch(function(err) {
+                    // registration failed :(
+                    SWUtils.updateProgress('ServiceWorker registration failed: ' + err);
+                });
+    }
+
+</script>
+
+
+</body>
+</html>

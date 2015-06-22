@@ -1,0 +1,41 @@
+body {
+    margin: 20px auto;
+    width: 600px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.scope {
+    font-weight: bold;
+}
+
+.leftSide {
+    float: left;
+    width: 45%;
+}
+
+.rightSide {
+    float: right;
+    width: 45%;
+}
+
+img {
+    width: 300px;
+    padding: 10px;
+}
+
+img:first-of-type {
+    padding: 0 10px 10px 10px;
+}
+
+.online {
+    background-color: #5cb85c;
+}
+
+.offline {
+    background-color: rgba(240, 173, 78, 0.3);
+}
