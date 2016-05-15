@@ -45,7 +45,7 @@ Or
     }
     ```
 
-- <a href="https://github.com/lamplightdev/r3search" target="_blank">r3search</a>
+- <a href="https://lamplightdev.github.io/r3search/" target="_blank">r3search</a>
 =======
 
 A simple app that makes use of Service Workers to enable offline access. It's a search interface to
