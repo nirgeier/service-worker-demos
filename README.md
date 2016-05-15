@@ -1,7 +1,5 @@
 # Service worker - Code snippets
 
-###jsilconf 2015
-
 >    _**Nir geier**_
 nirgeier@gmail.com
 
